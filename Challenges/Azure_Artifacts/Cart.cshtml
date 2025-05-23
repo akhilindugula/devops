@@ -1,0 +1,14 @@
+@page
+@model CartModel
+@using StoreCore
+@{
+    var calculator = new ShippingCalculator();
+    var shippingCost = calculator.CalculateShippingCost(10);
+}
+@{
+    ViewData["Title"] = "WEBStore Shopping Cart";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Here's your shopping cart:</p>
+<p>Here's your shipping cost: $@shippingCost</p>
